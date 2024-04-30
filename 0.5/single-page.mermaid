@@ -1,0 +1,6 @@
+graph TD;
+    A[User] --> B(Enter https://studies.cs.helsinki.fi/exampleapp/spa);
+    B --> C{Is SPA loaded?};
+    C -->|Yes| D[Display SPA interface];
+    C -->|No| E[Load SPA HTML, CSS, and JS];
+    E --> D;

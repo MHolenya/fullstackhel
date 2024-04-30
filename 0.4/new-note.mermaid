@@ -1,0 +1,13 @@
+sequenceDiagram
+    participant browser
+    participant server
+    participant db
+
+    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
+    activate server
+    server->>db: Save new note data
+    activate db
+    db-->>server: Confirmation of data saved
+    deactivate db
+    server-->>browser: Confirmation of note creation
+    deactivate server
